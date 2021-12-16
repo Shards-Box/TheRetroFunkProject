@@ -184,6 +184,8 @@ void GDLevelLoader::LoadCustomProperties()
 	//Custom Size
 	//|
 	//|
+	//- Chains
+	AddCustomSize(41, Vector3(1, 3.5, 1));
 	//- Rods
 	AddCustomSize(15, Vector3(0.21 * 1.5, 1.33 * 1.5, 1));
 	AddCustomSize(16, Vector3(0.2 * 1.5, 0.88 * 1.5, 1));
@@ -212,6 +214,8 @@ void GDLevelLoader::LoadCustomProperties()
 	//No Collisions
 	//|
 	//|
+	//- Chains
+	AddNoCollisions(41);
 	//- Rods
 	AddNoCollisions(15);
 	AddNoCollisions(16);
