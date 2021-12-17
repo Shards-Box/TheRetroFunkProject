@@ -28,9 +28,11 @@ void GDLevelLoader::OnStart()
 	// Stereo Madness: 1556066
 	// How by Spu7nix: 63395980
 	// Future Funk by JonathanGD: 44062068
+	// Block IDs by GDColon: 58079690
+	// Test Level by BoxShards: 76620227 (Testing Decals like Chains and Faded Spikes)
 
 	std::string urlResult = Web::Post("http://www.boomlings.com/database/downloadGJLevel22.php", "gameVersion=20&binaryVersion=35&gdw=0&levelID=1556066&secret=Wmfd2893gb7");
-
+	
 	std::string levelSubstring = StringAPI::GetSubstringBetween(urlResult, ":4:", ":5:");
 
 	if (!StringAPI::StartsWith(levelSubstring, "kS"))
@@ -184,11 +186,20 @@ void GDLevelLoader::LoadCustomProperties()
 	//Custom Size
 	//|
 	//|
-	//- Chains
-	AddCustomSize(41, Vector3(0.6, 1.8, 1));
-	AddCustomSize(106, Vector3(1, 2.3, 1));
-	AddCustomSize(107, Vector3(1, 1.3, 1));
-	AddCustomSize(110, Vector3(0.8, 1.3, 1));
+	//- Decals
+	AddCustomSize(18, Vector3(512.f / 120,166.f / 120,1));
+	AddCustomSize(19, Vector3(416.f / 120,146.f / 120,1));
+	AddCustomSize(20, Vector3(292.f / 120,116.f / 120,1));
+	AddCustomSize(21, Vector3(168.f / 120,52.f / 120,1));
+	AddCustomSize(41, Vector3(78.f / 120, 278.f / 120, 1));
+	AddCustomSize(48, Vector3(460.f / 120, 154.f / 120, 1));
+	AddCustomSize(49, Vector3(320.f / 120, 128.f / 120, 1));
+	AddCustomSize(106, Vector3(108.f / 120, 262.f / 120, 1));
+	AddCustomSize(107, Vector3(108.f / 120, 152.f / 120, 1));
+	AddCustomSize(110, Vector3(78.f / 120, 136.f / 120, 1));
+	AddCustomSize(113, Vector3(498.f / 120, 158.f / 120, 1));
+	AddCustomSize(114, Vector3(344.f / 120, 134.f / 120, 1));
+	AddCustomSize(115, Vector3(222.f / 120, 106.f / 120, 1));
 	//- Rods
 	AddCustomSize(15, Vector3(0.21 * 1.5, 1.33 * 1.5, 1));
 	AddCustomSize(16, Vector3(0.2 * 1.5, 0.88 * 1.5, 1));
@@ -217,11 +228,20 @@ void GDLevelLoader::LoadCustomProperties()
 	//No Collisions
 	//|
 	//|
-	//- Chains
+	//- Decals
+	AddNoCollisions(18);
+	AddNoCollisions(19);
+	AddNoCollisions(20);
+	AddNoCollisions(21);
 	AddNoCollisions(41);
+	AddNoCollisions(48);
+	AddNoCollisions(49);
 	AddNoCollisions(106);
 	AddNoCollisions(107);
 	AddNoCollisions(110);
+	AddNoCollisions(113);
+	AddNoCollisions(114);
+	AddNoCollisions(115);
 	//- Rods
 	AddNoCollisions(15);
 	AddNoCollisions(16);
