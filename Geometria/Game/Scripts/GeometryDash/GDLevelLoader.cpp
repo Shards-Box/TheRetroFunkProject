@@ -29,7 +29,7 @@ void GDLevelLoader::OnStart()
 	// How by Spu7nix: 63395980
 	// Future Funk by JonathanGD: 44062068
 	// Block IDs by GDColon: 58079690
-	// Test Level by BoxShards: 76620227 (Testing Decals like Chains and Faded Spikes)
+	// Test Level by BoxShards: 76620227 (Testing Certain Blocks)
 
 	std::string urlResult = Web::Post("http://www.boomlings.com/database/downloadGJLevel22.php", "gameVersion=20&binaryVersion=35&gdw=0&levelID=1556066&secret=Wmfd2893gb7");
 	
@@ -185,8 +185,55 @@ void GDLevelLoader::LoadCustomProperties()
 {
 	//Custom Size
 	//|
+	//- Outline Blocks [Various]
+	AddCustomSize(305, Vector3(80.f / 120, 80.f / 120, 1));
+	AddCustomSize(307, Vector3(200.f / 120, 108.f / 120, 1));
+	AddCustomSize(468, Vector3(120.f / 120, 6.f / 120, 1));
+	AddCustomSize(471, Vector3(8.f / 120, 120.f / 120, 1));
+	AddCustomSize(472, Vector3(8.f / 120, 8.f / 120, 1));
+	AddCustomSize(473, Vector3(10.f / 120, 10.f / 120, 1));
+	AddCustomSize(474, Vector3(16.f / 120, 8.f / 120, 1));
+	AddCustomSize(475, Vector3(120.f / 120, 6.f / 120, 1));
+	AddCustomSize(661, Vector3(60.f / 120, 60.f / 120, 1));
+	AddCustomSize(662, Vector3(120.f / 120, 60.f / 120, 1));
+	AddCustomSize(663, Vector3(120.f / 120, 60.f / 120, 1));
+	AddCustomSize(664, Vector3(120.f / 120, 60.f / 120, 1));
+	AddCustomSize(1154, Vector3(60.f / 120, 6.f / 120, 1));
+	AddCustomSize(1155, Vector3(60.f / 120, 60.f / 120, 1));
+	AddCustomSize(1156, Vector3(60.f / 120, 60.f / 120, 1));
+	AddCustomSize(1157, Vector3(8.f / 120, 60.f / 120, 1));
+	AddCustomSize(1158, Vector3(8.f / 120, 8.f / 120, 1));
+	AddCustomSize(1202, Vector3(120.f / 120, 12.f / 120, 1));
+	AddCustomSize(1203, Vector3(120.f / 120, 14.f / 120, 1));
+	AddCustomSize(1204, Vector3(120.f / 120, 14.f / 120, 1));
+	AddCustomSize(1205, Vector3(14.f / 120, 14.f / 120, 1));
+	AddCustomSize(1206, Vector3(14.f / 120, 14.f / 120, 1));
+	AddCustomSize(1207, Vector3(26.f / 120, 14.f / 120, 1));
+	AddCustomSize(1208, Vector3(60.f / 120, 14.f / 120, 1));
+	AddCustomSize(1209, Vector3(120.f / 120, 14.f / 120, 1));
+	AddCustomSize(1210, Vector3(120.f / 120, 14.f / 120, 1));
+	AddCustomSize(1220, Vector3(120.f / 120, 24.f / 120, 1));
+	AddCustomSize(1221, Vector3(120.f / 120, 26.f / 120, 1));
+	AddCustomSize(1222, Vector3(120.f / 120, 26.f / 120, 1));
+	AddCustomSize(1223, Vector3(26.f / 120, 26.f / 120, 1));
+	AddCustomSize(1224, Vector3(26.f / 120, 26.f / 120, 1));
+	AddCustomSize(1225, Vector3(50.f / 120, 16.f / 120, 1));
+	AddCustomSize(1226, Vector3(120.f / 120, 26.f / 120, 1));
+	AddCustomSize(1227, Vector3(120.f / 120, 26.f / 120, 1));
+	AddCustomSize(1260, Vector3(120.f / 120, 6.f / 120, 1));
+	AddCustomSize(1261, Vector3(10.f / 120, 10.f / 120, 1));
+	AddCustomSize(1262, Vector3(120.f / 120, 12.f / 120, 1));
+	AddCustomSize(1263, Vector3(16.f / 120, 16.f / 120, 1));
+	AddCustomSize(1264, Vector3(120.f / 120, 24.f / 120, 1));
+	AddCustomSize(1265, Vector3(29.f / 120, 29.f / 120, 1));
+	AddCustomSize(1339, Vector3(240.f / 120, 120.f / 120, 1));
 	//|
-	//- Decals
+	//  I'm going to punt Robtop to the moon
+	//  For how he renders these Outline Blocks
+	//  - B
+	//|
+	//- Decals		[Various]
+	//|
 	AddCustomSize(18, Vector3(512.f / 120,166.f / 120,1));
 	AddCustomSize(19, Vector3(416.f / 120,146.f / 120,1));
 	AddCustomSize(20, Vector3(292.f / 120,116.f / 120,1));
@@ -200,35 +247,41 @@ void GDLevelLoader::LoadCustomProperties()
 	AddCustomSize(113, Vector3(498.f / 120, 158.f / 120, 1));
 	AddCustomSize(114, Vector3(344.f / 120, 134.f / 120, 1));
 	AddCustomSize(115, Vector3(222.f / 120, 106.f / 120, 1));
-	//- Rods
+	//|
+	//- Rods		[rod_##_001.png]
+	//|
 	AddCustomSize(15, Vector3(0.21 * 1.5, 1.33 * 1.5, 1));
 	AddCustomSize(16, Vector3(0.2 * 1.5, 0.88 * 1.5, 1));
 	AddCustomSize(17, Vector3(0.18 * 1.5, 0.41 * 1.5, 1));
+	//|
 	//- Portals		[portal_XX_front_001.png]
-	AddCustomSize(10, Vector3(50.f / 60, 150.f / 60, 1));//gravity down		( 1)
-	AddCustomSize(11, Vector3(50.f / 60, 150.f / 60, 1));//gravity up			( 2)
-	AddCustomSize(12, Vector3(68.f / 60, 172.f / 60, 1));//cube				( 3)
-	AddCustomSize(13, Vector3(68.f / 60, 172.f / 60, 1));//ship				( 4)
-	AddCustomSize(45, Vector3(88.f / 60, 184.f / 60, 1));//mirror				( 5)
-	AddCustomSize(46, Vector3(88.f / 60, 184.f / 60, 1));//unmirror			( 6)
-	AddCustomSize(47, Vector3(68.f / 60, 172.f / 60, 1));//ball				( 7)
-	AddCustomSize(99, Vector3(62.f / 60, 180.f / 60, 1));//unmini				( 8)
-	AddCustomSize(101, Vector3(62.f / 60, 180.f / 60, 1));//mini				( 9)
+	//|
+	AddCustomSize(10, Vector3(50.f / 60, 150.f / 60, 1));//gravity down		(01)
+	AddCustomSize(11, Vector3(50.f / 60, 150.f / 60, 1));//gravity up	    (02)
+	AddCustomSize(12, Vector3(68.f / 60, 172.f / 60, 1));//cube				(03)
+	AddCustomSize(13, Vector3(68.f / 60, 172.f / 60, 1));//ship				(04)
+	AddCustomSize(45, Vector3(88.f / 60, 184.f / 60, 1));//mirror			(05)
+	AddCustomSize(46, Vector3(88.f / 60, 184.f / 60, 1));//unmirror			(06)
+	AddCustomSize(47, Vector3(68.f / 60, 172.f / 60, 1));//ball				(07)
+	AddCustomSize(99, Vector3(62.f / 60, 180.f / 60, 1));//unmini			(08)
+	AddCustomSize(101, Vector3(62.f / 60, 180.f / 60, 1));//mini			(09)
 	AddCustomSize(111, Vector3(68.f / 60, 172.f / 60, 1));//ufo				(10)
-	AddCustomSize(286, Vector3(82.f / 60, 182.f / 60, 1));//dual mode			(11)
+	AddCustomSize(286, Vector3(82.f / 60, 182.f / 60, 1));//dual mode		(11)
 	AddCustomSize(287, Vector3(82.f / 60, 182.f / 60, 1));//undual mode		(12)
-	AddCustomSize(660, Vector3(68.f / 60, 172.f / 60, 1));//wave				(13)
-	AddCustomSize(745, Vector3(68.f / 60, 172.f / 60, 1));//robot				(14)
+	AddCustomSize(660, Vector3(68.f / 60, 172.f / 60, 1));//wave			(13)
+	AddCustomSize(745, Vector3(68.f / 60, 172.f / 60, 1));//robot			(14)
 	AddCustomSize(747, Vector3(78.f / 60, 180.f / 60, 1));//teleport in		(15)
-	AddCustomSize(749, Vector3(78.f / 60, 180.f / 60, 1));//teleport out		(16)
-	AddCustomSize(1331, Vector3(68.f / 60, 172.f / 60, 1));//robot				(17)
+	AddCustomSize(749, Vector3(78.f / 60, 180.f / 60, 1));//teleport out	(16)
+	AddCustomSize(1331, Vector3(68.f / 60, 172.f / 60, 1));//robot			(17)
+	//|
 	//- differently-scaled blocks
 	// what the fuck rob
 
 	//No Collisions
 	//|
 	//|
-	//- Decals
+	//- Decals		[Various]
+	//|
 	AddNoCollisions(18);
 	AddNoCollisions(19);
 	AddNoCollisions(20);
@@ -242,7 +295,9 @@ void GDLevelLoader::LoadCustomProperties()
 	AddNoCollisions(113);
 	AddNoCollisions(114);
 	AddNoCollisions(115);
+	//|
 	//- Rods
+	//|
 	AddNoCollisions(15);
 	AddNoCollisions(16);
 	AddNoCollisions(17);
@@ -251,6 +306,7 @@ void GDLevelLoader::LoadCustomProperties()
 	//|
 	//|
 	//- Spikes
+	//|
 	AddCustomCollisionSize(8, Vector3(0.2, 0.2, 1));
 	AddCustomCollisionSize(39, Vector3(0.2, 0.2, 1));
 	AddCustomCollisionSize(103, Vector3(0.2, 0.2, 1));
