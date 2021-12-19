@@ -279,6 +279,21 @@ void GDLevelLoader::LoadCustomProperties()
 
 	//No Collisions
 	//|
+	//- Outline Blocks [Various]
+	AddNoCollisions(472);
+	AddNoCollisions(473);
+	AddNoCollisions(474);
+	AddNoCollisions(472);
+	AddNoCollisions(1158);
+	AddNoCollisions(1205);
+	AddNoCollisions(1206);
+	AddNoCollisions(1207);
+	AddNoCollisions(1223);
+	AddNoCollisions(1224);
+	AddNoCollisions(1225);
+	AddNoCollisions(1261);
+	AddNoCollisions(1263);
+	AddNoCollisions(1265);
 	//|
 	//- Decals		[Various]
 	//|
